@@ -1,3 +1,4 @@
+import NickImage from '../images/nick.jpg'
 export default function Example() {
   return (
     <div className="py-16 bg-gray-50 overflow-hidden lg:py-24">
@@ -26,13 +27,9 @@ export default function Example() {
         </svg>
 
         <div className="relative">
-          <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            A better way to send money
-          </h2>
-          <p className="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in,
-            accusamus quisquam.
-          </p>
+          <h1 className="text-center text-4xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            ARYSON!CK
+          </h1>
         </div>
 
         
@@ -63,7 +60,7 @@ export default function Example() {
         <div className="relative mt-12 sm:mt-16 lg:mt-24">
           <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
             <div className="lg:col-start-2">
-              <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">ARYSON!CK</h3>
+              <h3 className="text-2xl font-extrabold text-gray-900 tracking-tight sm:text-3xl">Who Am I?</h3>
               <p className="mt-3 text-lg text-gray-500">
                 Nick Santangelo who goes by the stage name ARYSON!CK, is an up and coming EDM DJ/Producer. He is currently attending the Recording Radio Film Connection School, and will be receiving his certificates in Ableton production and audio engineering. Born in Albuquerque, New Mexico ARYSON!CK got into producing Hip-Hop music when he was sixteen as a hobby. Over the years that hobby turned into a passion and love for music. In the Summer of 2015 ARYSON!CK went to Las Vegas, NV for a trip, it was then, where he saw Calvin Harris and got inspired to start DJing. ARYSONICK started DJing graduation parties, events, and weddings on the side. ARYSON!CK wanted to take his passion and love for music production and DJing to the next level. That's why he is currently attending Recording Radio Film Connection.
               </p>
@@ -94,8 +91,8 @@ export default function Example() {
               </svg>
               <img
                 className="relative mx-auto"
-                width={490}
-                src="../images/nick.jpg"
+                width={590}
+                src={NickImage}
                 alt=""
               />
             </div>
