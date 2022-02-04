@@ -1,9 +1,10 @@
 import NickImage from '../images/nick.jpg'
+import bg from '../images/dj1.jpg'
 
 
 export default function Feature() {
   return (
-    <div className="relative py-16 sm:py-24">
+    <div className="relative py-16 sm:py-24" style={{ background: `url(${bg}) center center`}}>
       <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start bg-white bg-opacity-60">
         <div className="relative sm:py-16 lg:py-0">
           <div aria-hidden="true" className="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
