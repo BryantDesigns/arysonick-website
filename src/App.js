@@ -1,9 +1,16 @@
+import { useState, useEffect } from 'react'
+import Feature from './components/Feature'
 
 function App() {
+  
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <>
+      <Feature />
+     
+    
+        
+   
+    </>
   );
 }
 
