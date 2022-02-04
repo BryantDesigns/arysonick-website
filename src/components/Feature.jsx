@@ -56,7 +56,7 @@ export default function Example() {
               ARYSON!CK
             </h2>
             <div className="mt-6 text-gray-500 space-y-6">
-              <p className="text-lg">
+              <p className="text-base leading-7">
                 Nick Santangelo who goes by the stage name ARYSON!CK, is an up and coming EDM DJ/Producer. He is currently attending the Recording Radio Film Connection School, and will be receiving his certificates in Ableton production and audio engineering. Born in Albuquerque, New Mexico ARYSON!CK got into producing Hip-Hop music when he was sixteen as a hobby. Over the years that hobby turned into a passion and love for music.
               </p>
               <p className="text-base leading-7">
