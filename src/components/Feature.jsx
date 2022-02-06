@@ -3,7 +3,7 @@ import NickImage from '../images/nick.jpg';
 export default function Feature() {
   return (
     <div className='relative py-16 sm:py-24'>
-      <div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start'>
+      <div className='lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:items-start lg:gap-24 lg:px-8'>
         <div className='relative sm:py-16 lg:py-0'>
           <div
             aria-hidden='true'
@@ -44,9 +44,9 @@ export default function Feature() {
               />
             </svg>
           </div>
-          <div className='relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20'>
+          <div className='relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20'>
             {/* Testimonial card*/}
-            <div className='relative h-96 pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden'>
+            <div className='relative h-96 overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl'>
               <img
                 className='absolute inset-0 h-full w-full object-cover'
                 src={NickImage}
@@ -61,8 +61,8 @@ export default function Feature() {
 
         <div className='relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0'>
           {/* Content area */}
-          <div className='py-12 sm:py-16 lg:py-20 text-left'>
-            <h2 className='text-3xl font-extrabold tracking-tight sm:text-4xl capitalize'>
+          <div className='py-12 text-left sm:py-16 lg:py-20'>
+            <h2 className='text-3xl font-extrabold capitalize tracking-tight sm:text-4xl'>
               A little about me
             </h2>
             <div className='my-6 space-y-6 font-medium'>
