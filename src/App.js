@@ -19,7 +19,7 @@ function App() {
             ARYSON!CK
           </h1>
         </div>
-        <div className='flex-col mx-8 -mt-20 justify-between bg-gradient-to-t from-zinc-800 to-zinc-700 rounded-xl shadow-xl shadow-orange-500 text-gray-400'>
+        <div className='flex-col mx-4 sm:mx-8 -mt-20 justify-between bg-gradient-to-t from-zinc-800 to-zinc-700 rounded-xl shadow-xl shadow-orange-500 text-gray-400'>
           <Feature />
           <Footer />
         </div>
