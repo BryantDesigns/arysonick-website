@@ -5,7 +5,7 @@ import HeaderImage from './images/dj1.jpg';
 function App() {
   return (
     <>
-      <div className='bg-zinc-900 h-screen'>
+      <div className='bg-zinc-900'>
         <div
           className='h-96 flex justify-center items-center'
           style={{
@@ -15,7 +15,7 @@ function App() {
             backgroundRepeat: 'no-repeat',
           }}
         >
-          <h1 className='text-8xl -mt-20 md:text-9xl text-orange-500 drop-shadow-lg '>
+          <h1 className='text-6xl -mt-20 sm:text-7xl md:text-9xl text-orange-500 drop-shadow-lg '>
             ARYSON!CK
           </h1>
         </div>
