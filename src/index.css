@@ -1,3 +1,204 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+
+@theme {
+  --color-ink: #0e0b09;
+  --color-soot: #17120f;
+  --color-char: #231b16;
+  --color-bone: #f4eee1;
+  --color-dust: #b9ae9c;
+  --color-zia: #ffc72c;
+  --color-chile: #d1121f;
+  --color-ember: #ff5a1f;
+
+  --font-display: 'Big Shoulders Display', Impact, sans-serif;
+  --font-sans: Archivo, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --tracking-tightest: -0.04em;
+  --tracking-label: 0.22em;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-ink font-sans text-bone antialiased;
+  }
+  ::selection {
+    @apply bg-zia text-ink;
+  }
+  :focus-visible {
+    @apply ring-2 ring-zia ring-offset-2 ring-offset-ink outline-hidden;
+  }
+}
+
+@utility label {
+  @apply font-mono text-[0.7rem] tracking-label text-dust uppercase;
+}
+
+@utility btn {
+  @apply inline-flex items-center gap-3 px-6 py-4 font-mono text-xs font-semibold tracking-label uppercase transition duration-200;
+}
+
+@utility btn-primary {
+  @apply btn bg-zia text-ink hover:-translate-y-0.5 hover:bg-bone;
+  box-shadow: 6px 6px 0 0 var(--color-chile);
+  &:hover {
+    box-shadow: 8px 8px 0 0 var(--color-chile);
+  }
+}
+
+@utility btn-ghost {
+  @apply btn border border-bone/30 text-bone hover:border-zia hover:text-zia;
+}
+
+@utility field {
+  @apply w-full border-0 border-b border-bone/25 bg-transparent px-0 py-3 text-bone transition placeholder:text-bone/30 focus:border-zia focus:ring-0;
+}
+
+/* Film grain overlay — gives the whole site a gritty, printed-poster feel */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: -50%;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 1.2s steps(6) infinite;
+}
+
+@keyframes grain {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(-3%, 2%);
+  }
+  40% {
+    transform: translate(2%, -3%);
+  }
+  60% {
+    transform: translate(-2%, -1%);
+  }
+  80% {
+    transform: translate(3%, 3%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Marquee */
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+.marquee-reverse {
+  animation-direction: reverse;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Slow-spinning Zia sun */
+.spin-slow {
+  animation: spin 60s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Equalizer bars */
+.eq span {
+  display: block;
+  width: 3px;
+  background: currentColor;
+  transform-origin: bottom;
+  animation: eq 1s ease-in-out infinite;
+}
+.eq span:nth-child(2) {
+  animation-delay: -0.4s;
+}
+.eq span:nth-child(3) {
+  animation-delay: -0.7s;
+}
+.eq span:nth-child(4) {
+  animation-delay: -0.2s;
+}
+@keyframes eq {
+  0%,
+  100% {
+    transform: scaleY(0.25);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+/* Hero headline: outlined second line */
+.text-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-bone);
+}
+@media (min-width: 768px) {
+  .text-outline {
+    -webkit-text-stroke-width: 3px;
+  }
+}
+
+/* Hero load-in */
+.rise {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .grain::after,
+  .marquee,
+  .spin-slow,
+  .eq span {
+    animation: none;
+  }
+  .rise {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
