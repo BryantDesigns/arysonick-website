@@ -28,7 +28,7 @@ export default function Gallery() {
               as='figure'
               key={s.caption}
               delay={i * 120}
-              className={`group bg-char relative aspect-[4/3] overflow-hidden md:aspect-auto ${s.className}`}
+              className={`group relative aspect-[4/3] overflow-hidden bg-char md:aspect-auto ${s.className}`}
             >
               <img
                 src={s.src}
@@ -36,8 +36,8 @@ export default function Gallery() {
                 loading='lazy'
                 className='h-full w-full object-cover transition duration-700 group-hover:scale-105'
               />
-              <div className='from-ink/80 absolute inset-0 bg-gradient-to-t via-transparent to-transparent' />
-              <figcaption className='label text-bone absolute bottom-4 left-4'>
+              <div className='absolute inset-0 bg-linear-to-t from-ink/80 via-transparent to-transparent' />
+              <figcaption className='absolute bottom-4 left-4 label text-bone'>
                 <span className='text-zia'>
                   Fig. {String(i + 1).padStart(2, '0')}
                 </span>{' '}

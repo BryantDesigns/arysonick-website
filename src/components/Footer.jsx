@@ -13,7 +13,7 @@ export default function Footer() {
               <a
                 key={s.name}
                 href={s.href}
-                className='border-bone/20 text-bone hover:border-zia hover:bg-zia hover:text-ink grid h-12 w-12 place-items-center border transition'
+                className='grid h-12 w-12 place-items-center border border-bone/20 text-bone transition hover:border-zia hover:bg-zia hover:text-ink'
               >
                 <span className='sr-only'>{s.name}</span>
                 <SocialIcon name={s.name} className='h-5 w-5' />
@@ -21,12 +21,12 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className='border-bone/10 mt-12 flex flex-col justify-between gap-4 border-t pt-8 sm:flex-row'>
+        <div className='mt-12 flex flex-col justify-between gap-4 border-t border-bone/10 pt-8 sm:flex-row'>
           <p className='label'>
             &copy; {new Date().getFullYear()} {siteConfig.name}. All rights
             reserved.
           </p>
-          <a href='#top' className='label hover:text-zia transition'>
+          <a href='#top' className='label transition hover:text-zia'>
             Back to top ↑
           </a>
         </div>

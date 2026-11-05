@@ -15,7 +15,7 @@ export default function Marquee({ reverse = false, tone = 'zia' }) {
     <div className='flex shrink-0 items-center' aria-hidden={hidden}>
       {words.map((w) => (
         <span key={w} className='flex items-center'>
-          <span className='font-display px-6 text-3xl font-black uppercase tracking-tight sm:text-4xl'>
+          <span className='px-6 font-display text-3xl font-black tracking-tight uppercase sm:text-4xl'>
             {w}
           </span>
           <ZiaSun className='h-7 w-7' strokeWidth={14} />

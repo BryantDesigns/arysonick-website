@@ -25,7 +25,7 @@ export default function Nav() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition duration-300 ${
         scrolled || open
-          ? 'border-bone/10 bg-ink/85 border-b backdrop-blur-md'
+          ? 'border-b border-bone/10 bg-ink/85 backdrop-blur-md'
           : 'bg-transparent'
       }`}
     >
@@ -39,14 +39,14 @@ export default function Nav() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className='label text-bone/70 hover:text-zia transition'
+                className='label text-bone/70 transition hover:text-zia'
               >
                 {l.label}
               </a>
             </li>
           ))}
           <li>
-            <a href='#book' className='btn-primary !py-3 !px-5'>
+            <a href='#book' className='btn-primary px-5! py-3!'>
               Book a set
             </a>
           </li>
@@ -60,12 +60,12 @@ export default function Nav() {
           onClick={() => setOpen((v) => !v)}
         >
           <span
-            className={`bg-bone absolute left-2 right-2 h-0.5 transition ${
+            className={`absolute right-2 left-2 h-0.5 bg-bone transition ${
               open ? 'top-1/2 rotate-45' : 'top-[14px]'
             }`}
           />
           <span
-            className={`bg-bone absolute left-2 right-2 h-0.5 transition ${
+            className={`absolute right-2 left-2 h-0.5 bg-bone transition ${
               open ? 'top-1/2 -rotate-45' : 'top-[24px]'
             }`}
           />
@@ -73,21 +73,21 @@ export default function Nav() {
       </nav>
 
       {open && (
-        <div className='border-bone/10 border-t px-5 pb-8 md:hidden'>
+        <div className='border-t border-bone/10 px-5 pb-8 md:hidden'>
           <ul className='flex flex-col'>
             {links.map((l) => (
-              <li key={l.href} className='border-bone/10 border-b'>
+              <li key={l.href} className='border-b border-bone/10'>
                 <a
                   href={l.href}
                   onClick={close}
-                  className='font-display block py-4 text-3xl font-black uppercase'
+                  className='block py-4 font-display text-3xl font-black uppercase'
                 >
                   {l.label}
                 </a>
               </li>
             ))}
           </ul>
-          <a href='#book' onClick={close} className='btn-primary mt-8'>
+          <a href='#book' onClick={close} className='mt-8 btn-primary'>
             Book a set
           </a>
         </div>

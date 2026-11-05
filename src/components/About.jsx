@@ -2,15 +2,15 @@ import NickImage from '../images/nick.jpg';
 import Reveal from './Reveal';
 import SectionHeading from './SectionHeading';
 
-const Name = () => <span className='text-zia font-semibold'>ARYSON!CK</span>;
+const Name = () => <span className='font-semibold text-zia'>ARYSON!CK</span>;
 
 export default function About() {
   return (
     <section id='about' className='relative py-28 sm:py-36'>
       <div className='mx-auto grid max-w-7xl gap-16 px-5 sm:px-8 lg:grid-cols-12 lg:gap-12'>
         <Reveal className='relative lg:col-span-5'>
-          <div className='bg-chile absolute -left-3 -top-3 h-full w-full sm:-left-5 sm:-top-5' />
-          <div className='bg-char relative aspect-[4/5] overflow-hidden'>
+          <div className='absolute -top-3 -left-3 h-full w-full bg-chile sm:-top-5 sm:-left-5' />
+          <div className='relative aspect-[4/5] overflow-hidden bg-char'>
             <img
               src={NickImage}
               alt='Nick Santangelo, aka ARYSON!CK, pointing at the camera'
@@ -18,7 +18,7 @@ export default function About() {
               loading='lazy'
             />
           </div>
-          <p className='bg-zia tracking-label text-ink absolute -bottom-5 right-4 rotate-[-3deg] px-4 py-2 font-mono text-xs font-semibold uppercase shadow-lg'>
+          <p className='absolute right-4 -bottom-5 rotate-[-3deg] bg-zia px-4 py-2 font-mono text-xs font-semibold tracking-label text-ink uppercase shadow-lg'>
             Nick Santangelo
           </p>
         </Reveal>
@@ -32,9 +32,9 @@ export default function About() {
 
           <Reveal
             delay={150}
-            className='text-bone/75 mt-10 space-y-6 text-lg leading-relaxed'
+            className='mt-10 space-y-6 text-lg leading-relaxed text-bone/75'
           >
-            <p className='text-bone text-xl'>
+            <p className='text-xl text-bone'>
               Nick Santangelo — better known as <Name /> — is an up-and-coming
               EDM DJ and producer born and raised in Albuquerque, New Mexico.
             </p>

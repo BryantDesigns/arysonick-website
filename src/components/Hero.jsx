@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section
       id='top'
-      className='relative isolate flex min-h-[100svh] flex-col overflow-hidden'
+      className='relative isolate flex min-h-svh flex-col overflow-hidden'
     >
       <img
         src={HeroImage}
@@ -14,21 +14,21 @@ export default function Hero() {
         className='absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center]'
       />
       {/* Red/black wash over the photo */}
-      <div className='from-ink via-ink/85 to-chile/40 absolute inset-0 -z-10 bg-gradient-to-r' />
-      <div className='from-ink to-ink/60 absolute inset-0 -z-10 bg-gradient-to-t via-transparent' />
+      <div className='absolute inset-0 -z-10 bg-linear-to-r from-ink via-ink/85 to-chile/40' />
+      <div className='absolute inset-0 -z-10 bg-linear-to-t from-ink via-transparent to-ink/60' />
 
-      <ZiaSun className='spin-slow text-zia/20 pointer-events-none absolute -right-40 top-1/2 -z-10 h-[38rem] w-[38rem] -translate-y-1/2 sm:-right-24 lg:h-[52rem] lg:w-[52rem]' />
+      <ZiaSun className='spin-slow pointer-events-none absolute top-1/2 -right-40 -z-10 h-[38rem] w-[38rem] -translate-y-1/2 text-zia/20 sm:-right-24 lg:h-[52rem] lg:w-[52rem]' />
 
       <div className='mx-auto flex w-full max-w-7xl flex-1 flex-col justify-center px-5 pt-28 pb-16 sm:px-8'>
         <p
-          className='rise label text-zia flex items-center gap-3'
+          className='rise flex items-center gap-3 label text-zia'
           style={{ animationDelay: '100ms' }}
         >
           <Equalizer className='text-zia' />
           EDM DJ / Producer — {siteConfig.hometown}
         </p>
 
-        <h1 className='font-display mt-6 font-black uppercase leading-[0.82] tracking-tight'>
+        <h1 className='mt-6 font-display leading-[0.82] font-black tracking-tight uppercase'>
           <span
             className='rise block text-[clamp(4.5rem,19vw,16rem)]'
             style={{ animationDelay: '200ms' }}
@@ -44,7 +44,7 @@ export default function Hero() {
         </h1>
 
         <p
-          className='rise text-bone/75 mt-8 max-w-md text-lg leading-relaxed'
+          className='rise mt-8 max-w-md text-lg leading-relaxed text-bone/75'
           style={{ animationDelay: '500ms' }}
         >
           High-voltage sets built on a producer's ear — from hip-hop roots to
@@ -64,7 +64,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className='border-bone/15 mx-auto hidden w-full max-w-7xl grid-cols-3 border-t px-5 sm:px-8 md:grid'>
+      <div className='mx-auto hidden w-full max-w-7xl grid-cols-3 border-t border-bone/15 px-5 sm:px-8 md:grid'>
         {[
           ['Est.', '2015'],
           ['Home base', 'Albuquerque, NM'],
@@ -72,7 +72,7 @@ export default function Hero() {
         ].map(([k, v]) => (
           <div key={k} className='py-6 pr-6'>
             <p className='label'>{k}</p>
-            <p className='font-display mt-1 text-2xl font-extrabold uppercase'>
+            <p className='mt-1 font-display text-2xl font-extrabold uppercase'>
               {v}
             </p>
           </div>

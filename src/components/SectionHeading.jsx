@@ -8,12 +8,12 @@ export default function SectionHeading({
 }) {
   return (
     <Reveal className={className}>
-      <p className='label flex items-center gap-4'>
+      <p className='flex items-center gap-4 label'>
         <span className='text-zia'>{index}</span>
-        <span className='bg-bone/30 h-px w-10' />
+        <span className='h-px w-10 bg-bone/30' />
         {kicker}
       </p>
-      <h2 className='font-display mt-5 text-5xl font-black uppercase leading-[0.9] tracking-tight sm:text-6xl lg:text-7xl'>
+      <h2 className='mt-5 font-display text-5xl leading-[0.9] font-black tracking-tight uppercase sm:text-6xl lg:text-7xl'>
         {children}
       </h2>
     </Reveal>

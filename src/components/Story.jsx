@@ -26,7 +26,7 @@ const chapters = [
 
 export default function Story() {
   return (
-    <section id='story' className='bg-soot relative py-28 sm:py-36'>
+    <section id='story' className='relative bg-soot py-28 sm:py-36'>
       <div className='mx-auto max-w-7xl px-5 sm:px-8'>
         <SectionHeading index='02' kicker='The story so far'>
           Built one
@@ -34,25 +34,25 @@ export default function Story() {
           at a time.
         </SectionHeading>
 
-        <ol className='bg-bone/10 mt-20 grid gap-px sm:grid-cols-2 lg:grid-cols-4'>
+        <ol className='mt-20 grid gap-px bg-bone/10 sm:grid-cols-2 lg:grid-cols-4'>
           {chapters.map((c, i) => (
             <Reveal
               as='li'
               key={c.mark}
               delay={i * 120}
-              className='group bg-soot hover:bg-char relative p-8 transition-colors duration-300'
+              className='group relative bg-soot p-8 transition-colors duration-300 hover:bg-char'
             >
               <span className='label'>
                 Chapter {String(i + 1).padStart(2, '0')}
               </span>
-              <p className='font-display text-bone group-hover:text-zia mt-6 text-7xl font-black uppercase leading-none transition-colors duration-300'>
+              <p className='mt-6 font-display text-7xl leading-none font-black text-bone uppercase transition-colors duration-300 group-hover:text-zia'>
                 {c.mark}
               </p>
-              <h3 className='tracking-label text-zia mt-6 font-mono text-sm font-semibold uppercase'>
+              <h3 className='mt-6 font-mono text-sm font-semibold tracking-label text-zia uppercase'>
                 {c.title}
               </h3>
-              <p className='text-bone/65 mt-3 leading-relaxed'>{c.body}</p>
-              <span className='bg-chile absolute inset-x-0 top-0 h-1 origin-left scale-x-0 transition-transform duration-500 group-hover:scale-x-100' />
+              <p className='mt-3 leading-relaxed text-bone/65'>{c.body}</p>
+              <span className='absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-chile transition-transform duration-500 group-hover:scale-x-100' />
             </Reveal>
           ))}
         </ol>

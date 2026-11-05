@@ -43,22 +43,22 @@ export default function Booking() {
   return (
     <section
       id='book'
-      className='bg-chile relative isolate overflow-hidden py-28 sm:py-36'
+      className='relative isolate overflow-hidden bg-chile py-28 sm:py-36'
     >
-      <ZiaSun className='spin-slow text-ink pointer-events-none absolute -right-56 -top-40 -z-10 h-[44rem] w-[44rem] opacity-20' />
+      <ZiaSun className='spin-slow pointer-events-none absolute -top-40 -right-56 -z-10 h-[44rem] w-[44rem] text-ink opacity-20' />
       <div className='mx-auto grid max-w-7xl gap-16 px-5 sm:px-8 lg:grid-cols-2'>
         <Reveal>
-          <p className='label text-bone/80 flex items-center gap-4'>
+          <p className='flex items-center gap-4 label text-bone/80'>
             <span className='text-zia'>05</span>
-            <span className='bg-bone/40 h-px w-10' />
+            <span className='h-px w-10 bg-bone/40' />
             Booking
           </p>
-          <h2 className='font-display mt-5 text-6xl font-black uppercase leading-[0.85] tracking-tight sm:text-7xl lg:text-8xl'>
+          <h2 className='mt-5 font-display text-6xl leading-[0.85] font-black tracking-tight uppercase sm:text-7xl lg:text-8xl'>
             Let's make
             <br />
             <span className='text-zia'>some noise.</span>
           </h2>
-          <p className='text-bone/85 mt-8 max-w-md text-lg leading-relaxed'>
+          <p className='mt-8 max-w-md text-lg leading-relaxed text-bone/85'>
             Got a date in mind? Send the details and Nick will get back to you
             about availability and setup.
           </p>
@@ -133,7 +133,7 @@ export default function Booking() {
             </div>
             <button
               type='submit'
-              className='btn-primary mt-10 w-full justify-center'
+              className='mt-10 btn-primary w-full justify-center'
             >
               Send inquiry <ArrowRight className='h-4 w-4' />
             </button>
